@@ -8,12 +8,64 @@
         }
         a {
             text-decoration: none;
-            color: rgb(255, 255, 185);
+            color: #3366cc;
             font-weight: bold;
         }
+        p {
+            font-size: clamp(14px, 2vw, 22px);
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+        }
+
+        h2 {
+            font-size: clamp(22px, 4vw, 36px);
+        }
+
+        h3 {
+            font-size: clamp(18px, 3vw, 28px);
+        }
+
+        h4 {
+            font-size: clamp(16px, 2.5vw, 22px);
+        }
+
+        /* 1) Root sizing guard: scales a bit, never below 16px, caps at 20px */
+html {
+  font-size: clamp(16px, 1.2vw + 0.2rem, 20px);
+  /* line-height: 1.4; */
+}
+
+/* 2) Body copy (1rem = root size) */
+body {
+    font-size: 1rem;
+    background-color:rgb(243, 255, 243);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3) Headings in rems (safe + responsive) */
+h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); }
+h2 { font-size: clamp(1.6rem, 3.8vw, 2.4rem); }
+h3 { font-size: clamp(1.4rem, 3.2vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2.6vw, 1.6rem); }
+
+/* Optional: slightly tighter lines for headings */
+/* h1, h2, h3, h4 { line-height: 1.15; } */
+
+div {
+    /* width: 65%;
+    margin: 0 auto; */
+      width: clamp(680px, 60vw, 1100px);
+  margin: 0 auto;
+  padding: 1rem;
+}
     </style>
-    <body style="background-color:rgb(243, 255, 243); text-align: left; display: flex; justify-content: center; align-items: center;">
-        <div style="width: 58%; margin: 0 auto;">
+    <body>
+        <div>
             <h3>🚧 Under Construction 🚧</h3>
 
             <h1 style="padding: 0;">Charlene Yuen</h1>
@@ -40,14 +92,15 @@
                 Working on sim-to-real for dynamic manipulation on quadrupeds for a novel task.
             </p>
 
-            <h4>Self-Reconfigurable Robots (ISI)</h4>
+            <h4>Self-Reconfigurable Robots (Information Sciences Institute)</h4>
             <p>
                 Investigating modular robot morphologies for adaptability.
             </p>
+            <img src="imgs/superbot.png" alt="Bot image" style="width: 25%;">
 
             <h4>Quadruped Locomotion and Control</h4>
             <p>Investigated quadruped legged manipulation capabilities via MPC and RL methods.</p>
-            <img src="imgs/a1_rope.gif" alt="Animated GIF" style="width: 200px;">
+            <img src="imgs/a1_rope.gif" alt="Animated GIF" style="width: 25%;">
 
             <h4>Generative Curriculum for Robotic Manipulation</h4>
             <p>
@@ -55,15 +108,11 @@
                 training scenarios (in the form of more geometrically complex objects) for
                 robotic grasping and more efficient skill acquisition.
             </p>
-            <!-- <p>
-                The following video clips show some rollouts for the final project of
-                CSCI 699 &#40;Deep Learning for Robotic Manipulation&#41; taught by Prof. Daniel Seita.<br>
-            </p> -->
 
-            <img src="imgs/success_cube.gif" alt="Animated GIF" style="width: 100px;">
-            <img src="imgs/ball_grasp.gif" alt="Animated GIF" style="width: 100px;">
-            <img src="imgs/generative_obj.gif" alt="Animated GIF" style="width: 100px;">
-            <img src="imgs/cube_grasp.gif" alt="Animated GIF" style="width: 100px;">
+            <img src="imgs/success_cube.gif" alt="Animated GIF" style="width: 24%;">
+            <img src="imgs/ball_grasp.gif" alt="Animated GIF" style="width: 24%;">
+            <img src="imgs/generative_obj.gif" alt="Animated GIF" style="width: 24%;">
+            <img src="imgs/cube_grasp.gif" alt="Animated GIF" style="width: 24%;">
 
             <h3>Work Experience</h3>
             <p>
@@ -85,16 +134,17 @@
             </p>
 
             <h3>Publications</h3>
-            <small>Demonstration of Metrics for Self-Healing and Self-Reconfiguration in a Monolithic and Segmented Robotic System<br>
-            <span style="font-size: x-small;">
+            <p>Demonstration of Metrics for Self-Healing and Self-Reconfiguration in a Monolithic and Segmented Robotic System<p>
+            <small style="color:gray";>
                 Jaxson Hill, Griffin MacRae, Pierson Lintala, Noah Taniguchi, Joshua Pastizzo, Ethan Bootehsaz, Harrison Pearl, Charlene Yuen,
                 David Samia, Le Duong, Niccolo Von-Bueren, Tyler Rotello, Wei-Min Shen, David A. Barnhart.
-            </span>
-            <span style="font-size: x-small;">[Submitted] AIAA (2025)</span>
+                [Submitted] AIAA (2025)
             </small>
 
-            <p><b>Contact: </b>yuenchar@usc.edu</p>
-            <p><a href='https://www.linkedin.com/in/charlene-yuen-a3299a228' style="color:#3366cc; text-decoration:none;">LinkedIn</a></p>
+            <p>
+                <b>Contact:<br> </b>yuenchar@usc.edu</p>
+                <a href='https://www.linkedin.com/in/charlene-yuen-a3299a228'>LinkedIn</a>
+            </p>
         </div>
     </body>
 </html>
