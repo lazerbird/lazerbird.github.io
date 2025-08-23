@@ -31,13 +31,11 @@
             font-size: clamp(16px, 2.5vw, 22px);
         }
 
-        /* 1) Root sizing guard: scales a bit, never below 16px, caps at 20px */
 html {
   font-size: clamp(16px, 1.2vw + 0.2rem, 20px);
   /* line-height: 1.4; */
 }
 
-/* 2) Body copy (1rem = root size) */
 body {
     font-size: 1rem;
     background-color:rgb(243, 255, 243);
@@ -47,13 +45,11 @@ body {
     align-items: center;
 }
 
-/* 3) Headings in rems (safe + responsive) */
 h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); }
 h2 { font-size: clamp(1.6rem, 3.8vw, 2.4rem); }
 h3 { font-size: clamp(1.4rem, 3.2vw, 2rem); }
 h4 { font-size: clamp(1.2rem, 2.6vw, 1.6rem); }
 
-/* Optional: slightly tighter lines for headings */
 /* h1, h2, h3, h4 { line-height: 1.15; } */
 
 div {
